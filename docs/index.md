@@ -1,28 +1,22 @@
 # Payment Protocol
+
 `PaymentProtocol` and associated functions and methods will serialize, deserialize, sign and verify payment protocol messages both in Node.js and web browsers. Both X.509 and [bitcoin identity protocol](https://en.bitcoin.it/wiki/Identity_protocol_v1) are supported. For detailed technical information, please view [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki).
 
 ## Installation
+
 Payment protocol is implemented as a separate module and you must add it to your dependencies:
 
-For node projects:
-
 ```
-npm install bitcore-lib --save
-npm install bitcore-payment-protocol --save
-```
-
-For client-side projects:
-
-```
-bower install bitcore-lib --save
-bower install bitcore-payment-protocol --save
+npm install dashcore-lib
+npm install dashcore-payment-protocol
 ```
 
 ## Make Payment Details
+
 Here the merchant's server will construct the payment details message:
 
 ```javascript
-var PaymentProtocol = require('bitcore-payment-protocol');
+var PaymentProtocol = require('dashcore-payment-protocol');
 var now = Date.now() / 1000 | 0;
 
 // construct the payment details
@@ -39,6 +33,7 @@ details.set('merchant_data', new Buffer({size: 7})); // identify the request
 For more information about these fields please visit [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki#paymentdetailspaymentrequest)
 
 ## Sign a Payment Request
+
 The merchant's server will then construct a payment request and send it to the customer:
 
 ```javascript
@@ -64,6 +59,7 @@ var rawbody = request.serialize();
 ```
 
 ## Verify a Payment Request
+
 The customers wallet would then verify the payment request as follows (after asking for the payment request message):
 
 ```javascript
@@ -99,6 +95,7 @@ var merchant_data = details.get('merchant_data');
 ```
 
 ## Send a Payment
+
 After the request is verified a payment can be sent to the merchant from the customer's wallet:
 
 ```javascript
@@ -130,6 +127,7 @@ var rawbody = pay.serialize();
 ```
 
 ## Receive a Payment
+
 The merchant would then receive the payment as follows:
 
 ```javascript
@@ -141,10 +139,11 @@ var transactions = payment.get('transactions');
 var refund_to = payment.get('refund_to');
 var memo = payment.get('memo');
 
-// send the transaction to the bitcoin network
+// send the transaction to the Dash network
 ```
 
 ## Send a Payment Acknowledgement
+
 After the payment has been broadcasted, a payment acknowledgement can be sent in response:
 
 ```javascript
@@ -162,6 +161,7 @@ var rawbody = ack.serialize();
 ```
 
 ## Receive an Acknowledgement
+
 The customer's wallet can then receive an acknowledgement of payment as follows:
 
 ```javascript
