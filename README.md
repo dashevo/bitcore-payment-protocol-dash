@@ -30,6 +30,56 @@ const signature = pr.get('signature');
 const verified = request.verify();
 ```
 
+## Release
+
+### Publishing to NPM
+
+To publish this package to NPM, first install and ensure all tests passing.
+
+```sh
+npm install
+npm run test
+npm run coverage  # to also check coverage
+```
+
+Also, browser bundle must be built, and it's a good idea to re-generate root
+SSL certs which are packaged with this module every once in a while:
+
+```sh
+npm run build
+npm run rootcerts
+```
+
+Don't forget to bump the version in `package.json` and `package-lock.json`
+using whatever method is easiest.
+
+Once all that is done, package maintainers can publish:
+
+```sh
+npm publish
+```
+
+### GitHub Release Follow-Up
+
+A tag should be pushed to github once published:
+
+```sh
+git tag v1.2.3 && git push origin v1.2.3
+```
+
+And in order to ensure a common ancestor commit, develop should be
+fast-forwarded to master and pushed:
+
+```sh
+git checkout develop && git merge --ff master && git push origin develop
+```
+
+### Note
+
+Ideally we build a tag-based release process into the GitHub / CI integration
+so that pushing a tag to GitHub will automatically perform all the above steps
+in order to publish the module to NPM.
+
 ## Contributing
 
 Feel free to dive in! [Open an issue](https://github.com/dashevo/dashcore-payment-protocol/issues/new) or submit PRs.
