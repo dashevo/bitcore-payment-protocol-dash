@@ -1,15 +1,11 @@
-Dashcore Payment Protocol
-==============================
+# Dashcore Payment Protocol
 
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-payment-protocol.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashcore-payment-protocol)
-[![Build Status](https://img.shields.io/travis/dashevo/dashcore-payment-protocol.svg?branch=master&style=flat-square)](https://travis-ci.org/dashevo/dashcore-payment-protocol)
-[![Coverage Status](https://img.shields.io/coveralls/dashevo/dashcore-payment-protocol.svg?style=flat-square)](https://coveralls.io/r/dashevo/dashcore-payment-protocol)
+[![Build Status](https://img.shields.io/travis/dashevo/dashcore-payment-protocol.svg?branch=master)](https://travis-ci.org/dashevo/dashcore-payment-protocol)
+[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-payment-protocol.svg)](https://www.npmjs.org/package/@dashevo/dashcore-payment-protocol)
 
-A module for [dashcore](https://github.com/dashevo/dashcore) that implements [Payment Protocol](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) and other related BIPs.
+A module for [dashcore-lib](https://github.com/dashevo/dashcore-lib) that implements [Payment Protocol](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) and other related BIPs.
 
 ## Getting Started
-
-This library is distributed in both the npm and bower packaging systems.
 
 ```sh
 npm install dashcore-lib
@@ -36,10 +32,8 @@ const verified = request.verify();
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/dashevo/dashcore/blob/master/CONTRIBUTING.md) on the main dashcore repo for information about how to contribute.
+Feel free to dive in! [Open an issue](https://github.com/dashevo/dashcore-payment-protocol/issues/new) or submit PRs.
 
 ## License
 
-Code released under [the MIT license](https://github.com/dashevo/dashcore/blob/master/LICENSE).
-
-Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
+[MIT](LICENSE) &copy; Dash Core Group, Inc.
