@@ -6,6 +6,6 @@ module.exports = {
   output: {
     library: 'PaymentProtocol',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'dashcore-payment-protocol.js'
-  }
+    filename: 'dashcore-payment-protocol.js',
+  },
 };
