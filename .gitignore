@@ -1,15 +1,9 @@
-*.sw[a-z]
-coverage
+# do not track dependencies
 node_modules
-bitcore-payment-protocol.js
-bitcore-payment-protocol.min.js
-tests.js
 
-lib/errors/index.js
-npm-debug.log
+# ignore generated code coverage output
+coverage
+.nyc_output
 
-bower_components
-report
-.DS_Store
-
-.idea/
+# ignore build artifacts
+dist
