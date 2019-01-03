@@ -8,14 +8,14 @@ A module for [dashcore-lib](https://github.com/dashevo/dashcore-lib) that implem
 ## Getting Started
 
 ```sh
-npm install dashcore-lib
-npm install dashcore-payment-protocol
+npm install @dashevo/dashcore-lib
+npm install @dashevo/dashcore-payment-protocol
 ```
 
 There are many examples of how to use it on the developer guide [section for payment protocol](https://bitcore.io/api/paypro). For example, the following code would verify a payment request:
 
 ```javascript
-const PaymentProtocol = require('dashcore-payment-protocol');
+const PaymentProtocol = require('@dashevo/dashcore-payment-protocol');
 
 const body = PaymentProtocol.PaymentRequest.decode(rawbody);
 const request = new PaymentProtocol().makePaymentRequest(body);
