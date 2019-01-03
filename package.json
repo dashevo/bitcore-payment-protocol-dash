@@ -49,8 +49,8 @@
   },
   "dependencies": {
     "@dashevo/dashcore-lib": "^0.15.8",
-    "asn1.js-rfc5280": "=2.0.0",
-    "jsrsasign": "^8.0.4",
+    "asn1.js-rfc5280": "=3.0.0",
+    "jsrsasign": "^8.0.12",
     "protobufjs": "^5.0.3"
   },
   "devDependencies": {
