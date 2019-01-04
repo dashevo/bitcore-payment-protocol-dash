@@ -7,8 +7,8 @@
 Payment protocol is implemented as a separate module and you must add it to your dependencies:
 
 ```
-npm install dashcore-lib
-npm install dashcore-payment-protocol
+npm install @dashevo/dashcore-lib
+npm install @dashevo/dashcore-payment-protocol
 ```
 
 ## Make Payment Details
@@ -16,7 +16,7 @@ npm install dashcore-payment-protocol
 Here the merchant's server will construct the payment details message:
 
 ```javascript
-var PaymentProtocol = require('dashcore-payment-protocol');
+var PaymentProtocol = require('@dashevo/dashcore-payment-protocol');
 var now = Date.now() / 1000 | 0;
 
 // construct the payment details
